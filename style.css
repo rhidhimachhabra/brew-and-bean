@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #3b2418;
+    background-color: #f5efe3;
+    line-height: 1.6;
+}
+
+hr {
+    display: none;
+}
+
+
+/* ========================================
+   HEADER / NAVBAR
+======================================== */
+
+header {
+    padding: 20px 60px;
+    background-color: #f5efe3;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 140px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3b2418;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #8b5e3c;
+}
+
+
+/* Order Now button */
+
+nav a:last-child {
+    background-color: #3b2418;
+    color: #f5efe3;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+nav a:last-child:hover {
+    background-color: #8b5e3c;
+    color: #f5efe3;
+}
+
+
+/* ========================================
+   GENERAL SECTION STYLES
+======================================== */
+
+section {
+    padding: 90px 10%;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+section h3 {
+    margin-bottom: 10px;
+}
+
+section p {
+    max-width: 700px;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   HERO / HOME SECTION
+======================================== */
+
+#home {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 10%;
+
+    /* Background image + dark overlay */
+    background-image:
+        linear-gradient(
+            rgba(59, 36, 24, 0.55),
+            rgba(59, 36, 24, 0.55)
+        ),
+        url("coffee-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #f5efe3;
+}
+
+#home h1 {
+    font-size: 60px;
+    max-width: 700px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+#home p {
+    font-size: 18px;
+    max-width: 650px;
+}
+
+/* Highlighted tagline */
+
+#home p:nth-of-type(2) {
+    font-weight: bold;
+    color: #d6a77a;
+    margin-top: 10px;
+}
+
+
+/* ========================================
+   HERO BUTTONS
+======================================== */
+
+#home button {
+    border: none;
+
+    padding: 13px 25px;
+    margin-right: 12px;
+    margin-top: 15px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background-color: #f5efe3;
+    color: #3b2418;
+
+    transition: 0.3s ease;
+}
+
+#home button:hover {
+    background-color: #d6a77a;
+    color: #3b2418;
+
+    transform: translateY(-2px);
+}
+
+
+/* Second hero button */
+
+#home button:nth-of-type(2) {
+    background-color: transparent;
+    color: #f5efe3;
+
+    border: 2px solid #f5efe3;
+}
+#home button:nth-of-type(2):hover {
+    background-color: #f5efe3;
+    color: #3b2418;
+}
+#about {
+    background-color: #f5efe3;
+}
+#about h3 {
+    font-size: 25px;
+    color: #8b5e3c;
+}
+#about p {
+    font-size: 17px;
+}
+#menu {
+    background-color: #eadbc8;
+    text-align: center;
+}
+
+#menu > p {
+    margin: 0 auto 40px;
+}
+
+
+/* Menu cards */
+
+#menu article {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 30%;
+    min-width: 250px;
+
+    margin: 15px;
+    padding-bottom: 20px;
+
+    background-color: #f5efe3;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(59, 36, 24, 0.12);
+
+    text-align: left;
+
+    transition: 0.3s ease;
+}
+
+
+/* Card hover */
+
+#menu article:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(59, 36, 24, 0.2);
+}
+
+
+/* Menu images */
+
+#menu article img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Menu title */
+
+#menu article h3 {
+    font-size: 21px;
+
+    padding: 18px 20px 5px;
+}
+
+
+/* Menu description */
+
+#menu article p {
+    padding: 0 20px;
+}
+
+
+/* Menu price */
+
+#menu article p:last-child {
+    color: #8b5e3c;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   OUR STORY
+======================================== */
+
+#story {
+    background-color: #f5efe3;
+}
+
+#story h3 {
+    color: #8b5e3c;
+
+    font-size: 25px;
+}
+
+#story p {
+    max-width: 800px;
+
+    font-size: 17px;
+}
+
+
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+#contact {
+    background-color: #eadbc8;
+}
+
+
+/* Contact information */
+
+#contact > article {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 22%;
+    min-width: 200px;
+
+    margin: 15px 1%;
+}
+
+#contact > article h3 {
+    color: #8b5e3c;
+}
+
+#contact > article p {
+    margin-bottom: 5px;
+}
+
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+
+#contact form {
+    margin-top: 20px;
+}
+
+#contact form article {
+    margin-bottom: 15px;
+}
+
+#contact label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+
+/* Input and textarea */
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    max-width: 400px;
+
+    padding: 12px;
+
+    border: 1px solid #c5ad94;
+
+    border-radius: 8px;
+
+    background-color: #f5efe3;
+
+    color: #3b2418;
+
+    font-family: inherit;
+}
+
+
+/* Message box */
+
+#contact textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* Input focus */
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 2px solid #8b5e3c;
+
+    border-color: #8b5e3c;
+}
+
+
+/* Send message button */
+
+#contact form button {
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    background-color: #3b2418;
+
+    color: #f5efe3;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #8b5e3c;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #3b2418;
+
+    color: #f5efe3;
+
+    padding: 50px 10%;
+}
+footer p {
+    margin-bottom: 12px;
+}
+footer p:first-child {
+    font-size: 25px;
+
+    font-weight: bold;
+}
+footer a {
+    color: #f5efe3;
+
+    text-decoration: none;
+
+    margin-right: 20px;
+
+    transition: 0.3s ease;
+}
+footer a:hover {
+    color: #d6a77a;
+}
+@media (max-width: 900px) {
+    header {
+        padding: 20px 30px;
+    }
+    nav {
+        gap: 15px;
+    }
+    #home h1 {
+        font-size: 45px;
+    }
+    #menu article {
+        width: 45%;
+    }
+    #contact > article {
+        width: 45%;
+    }
+}
+@media (max-width: 600px) {
+    header > div {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+    section {
+        padding: 60px 7%;
+    }
+    #home {
+        min-height: 75vh;
+
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    #home h1 {
+        font-size: 38px;
+    }
+    #home p {
+        font-size: 16px;
+    }
+    #menu article {
+        width: 100%;
+
+        margin: 15px 0;
+    }
+    #contact > article {
+        width: 100%;
+
+        margin: 15px 0;
+    }
+    footer {
+        padding: 40px 7%;
+    }
+}
